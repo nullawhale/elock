@@ -1,0 +1,10 @@
+github.com/dlasky/gotk3-layershell v0.0.0-20210827021656-e6ecab2731f7 h1:LDo0kwt+oW9a4lWlj2OakIgMW1ySXXVRGFt8GHUdYYA=
+github.com/dlasky/gotk3-layershell v0.0.0-20210827021656-e6ecab2731f7/go.mod h1:JHLx2Wz4mAPVwn4PFhC69ydwyHP4A3wQvlg7HKVVc1U=
+github.com/esimov/stackblur-go v1.1.0 h1:fwnZJC/7sHFzu4CDMgdJ1QxMN/q3k5MGILuoU4hH6oQ=
+github.com/esimov/stackblur-go v1.1.0/go.mod h1:7PcTPCHHKStxbZvBkUlQJjRclqjnXtQ0NoORZt1AlHE=
+github.com/gotk3/gotk3 v0.6.1 h1:GJ400a0ecEEWrzjBvzBzH+pB/esEMIGdB9zPSmBdoeo=
+github.com/gotk3/gotk3 v0.6.1/go.mod h1:/hqFpkNa9T3JgNAE2fLvCdov7c5bw//FHNZrZ3Uv9/Q=
+github.com/msteinert/pam v1.0.0 h1:4XoXKtMCH3+e6GIkW41uxm6B37eYqci/DH3gzSq7ocg=
+github.com/msteinert/pam v1.0.0/go.mod h1:M4FPeAW8g2ITO68W8gACDz13NDJyOQM9IQsQhrR6TOI=
+golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1 h1:SrN+KX8Art/Sf4HNj6Zcz06G7VEz+7w9tdXTPOZ7+l4=
+golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 h1:JGgROgKl9N8DuW20oFS5gxc+lE67/N3FcwmBPMe7ArY=
