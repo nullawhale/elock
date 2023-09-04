@@ -167,6 +167,8 @@ func drawIndicator(canvas *gtk.DrawingArea, cr *cairo.Context) {
 	if state == Idle || state == Typing || state == Success {
 		now := time.Now().Format("15:04")
 		date := time.Now().Format("02.01.2006")
+		week := time.Now().Weekday()
+		weekInt := int(week)
 
 		cr.SetSourceRGB(255, 255, 255)
 		cr.SetFontSize(38)
@@ -176,8 +178,13 @@ func drawIndicator(canvas *gtk.DrawingArea, cr *cairo.Context) {
 
 		cr.SetFontSize(20)
 		dateExt := cr.TextExtents(date)
-		cr.MoveTo(x-dateExt.Width/2, y+dateExt.Height+dateExt.Height)
+		cr.MoveTo(x-dateExt.Width/2, y+2*dateExt.Height)
 		cr.ShowText(date)
+
+		cr.SetFontSize(16)
+		weekDay := cr.TextExtents(weekToJp(weekInt))
+		cr.MoveTo(x-weekDay.Width/2, y+2*dateExt.Height+1.5*weekDay.Height)
+		cr.ShowText(weekToJp(weekInt))
 	} else {
 		cr.SetSourceRGB(255, 255, 255)
 		cr.SetFontSize(20)
@@ -192,6 +199,27 @@ func drawIndicator(canvas *gtk.DrawingArea, cr *cairo.Context) {
 		ext := cr.TextExtents(infoText)
 		cr.MoveTo(x-ext.Width/2, height*0.875-ext.Height/2)
 		cr.ShowText(infoText)
+	}
+}
+
+func weekToJp(weekday int) string {
+	switch weekday {
+	case 1:
+		return "月曜日"
+	case 2:
+		return "火曜日"
+	case 3:
+		return "水曜日"
+	case 4:
+		return "木曜日"
+	case 5:
+		return "金曜日"
+	case 6:
+		return "土曜日"
+	case 7:
+		return "日曜日"
+	default:
+		return ""
 	}
 }
 
